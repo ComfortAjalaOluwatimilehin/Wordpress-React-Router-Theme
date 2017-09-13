@@ -1,0 +1,38 @@
+@import "./colors";
+
+body,html{
+  margin:0;padding:0;
+  width:100%;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  background-color:$accentColor;
+  overflow: hidden;
+}
+ul{  margin:0;padding:0;}
+a{
+  color:inherit;
+  @extend .CENTER_FLEXED;
+  text-decoration: none;
+}
+.CENTER_FLEXED{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination{
+  width: 200px;
+}
+.GENERAL_BUTTON{
+  min-width: 200px;
+  font-size: 10pt;
+  font-weight: 800;
+  width: auto;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 35px;
+  text-align: center;
+  margin: 1em 0 0;
+  text-transform: uppercase;
+  cursor:pointer;
+
+}

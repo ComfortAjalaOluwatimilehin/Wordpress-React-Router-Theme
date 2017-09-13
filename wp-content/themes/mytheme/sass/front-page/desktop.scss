@@ -1,0 +1,26 @@
+@import "../dimensions";
+@import "../colors";
+
+@mixin desktop() {
+
+           #container{
+
+                    & > content{
+
+
+                          & > nav{
+
+                                  ul{
+                                          flex-direction: column;
+                                          min-height: $minHeight;
+                                            align-items: flex-end;
+                                  }
+                          }
+
+
+                          & >   a{
+                            font-size:45px;
+                          }
+                    }
+            }
+}

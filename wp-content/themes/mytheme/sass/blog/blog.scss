@@ -1,0 +1,60 @@
+@import "../colors";
+@import "../general";
+@import "../dimensions";
+@import "./desktop";
+@import "./mobile";
+@import "./tablet";
+@import "../resuse";
+@import "../transitions";
+
+.blog{
+  & > div{  flex-direction: column;}
+}
+
+.post-list{
+  list-style: none;
+  width: 90%;
+  @extend .CENTER_FLEXED;
+  .each-post{
+    height:300px;
+    padding: 2em;
+    color: black;
+    margin:.5em;
+    content{
+
+          p{
+            overflow: hidden;
+            max-height: 50%;
+          }
+    }
+    &.current-view-post{
+      flex:20;
+      box-shadow: 2px 1px 9px 2px #4e4e4e;
+      background: white;
+      h4{
+        color: #030d2c;
+        text-transform: uppercase;
+      }
+      content{
+        p{
+          font-size: large;
+          line-height: 2;
+          text-align: justify;
+          color: gray;
+        }
+      }
+    }
+    &.after-post, &.before-post{
+      flex:1;
+      background: #313d65;
+      transform: scale3d(1, 0.9, 1);
+      opacity: .2;
+      content{
+
+            p{
+              font-size: small;
+            }
+      }
+    }
+  }
+}

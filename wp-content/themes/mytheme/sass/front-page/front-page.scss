@@ -1,0 +1,53 @@
+@import "../colors";
+@import "../general";
+@import "../dimensions";
+@import "./home/home";
+@import "./desktop";
+@import "./mobile";
+@import "./tablet";
+
+@media screen and (max-width:$mobileWidth) {@include mobile();}
+@media  screen and (min-width:$tabletMinWidth) and (max-width:$tabletMaxWidth) {@include tablet();}
+@media screen and (min-width:$desktopMinWidth) {@include desktop();}
+
+#front-page-container{
+    & > #container{
+      min-height: $minHeight;
+      width: 100%;
+      & > content{
+        min-height: $minHeight;
+        width: inherit;
+        display: flex;
+        & > nav{ flex:1;}
+      & > section{ flex:3;}
+      & > nav{
+
+              ul{
+                color:$primaryColor;
+                width: inherit;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                 & >   a{
+                    font-weight: 500;
+                      margin: 1em;
+
+                      text-transform: uppercase;
+                        &.active-link{color:$linkHighlightColor;}
+                  }
+
+              }
+      }
+
+        & > section{
+          @extend .CENTER_FLEXED;
+          color:$primaryColor;
+
+            & > div{
+              margin:0;padding:0;
+            }
+        }
+      }
+    }
+}
